@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITU-T FG-TIDA · Theme #50 贡献矩阵（草案）</title>
+<style>
+  :root{
+    --bg:#f6f8fb; --card:#ffffff; --ink:#1f2937; --muted:#6b7280;
+    --line:#e5e7eb; --brand:#185fa5; --brand2:#534ab7; --ok:#0f6e56; --warn:#854f0b;
+    --shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:linear-gradient(180deg,#eef3fb 0%,#f6f8fb 220px);color:var(--ink);line-height:1.65}
+  .wrap{max-width:980px;margin:0 auto;padding:40px 24px 64px}
+  .hero{background:linear-gradient(135deg,#ffffff 0%,#eef4fd 100%);border:1px solid var(--line);
+    border-radius:18px;padding:30px 32px;box-shadow:var(--shadow)}
+  .hero .tag{display:inline-block;font-size:12px;color:var(--brand);background:#e6f1fb;
+    padding:4px 10px;border-radius:999px;margin-bottom:12px}
+  .hero h1{font-size:26px;font-weight:700;letter-spacing:-.5px}
+  .hero p{color:var(--muted);margin-top:8px;font-size:14px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+  .card h2{font-size:16px;margin-bottom:10px;color:var(--ink)}
+  .card.full{grid-column:1 / -1}
+  ol,ul{margin-left:18px;font-size:14px;color:#374151}
+  li{margin:6px 0}
+  .matrix{display:grid;grid-template-columns:120px repeat(4,1fr);gap:6px;margin-top:6px}
+  .cell{border:1px solid var(--line);border-radius:8px;padding:10px 8px;font-size:12px;text-align:center;background:#fafbfc}
+  .cell.head{background:#eef4fd;font-weight:600;color:var(--brand)}
+  .cell.rowh{background:#f1f5fb;font-weight:600;text-align:left;display:flex;align-items:center}
+  .cell.hot{background:#faeeda;border-color:#ef9f27;color:#633806;font-weight:600}
+  .legend{font-size:12px;color:var(--muted);margin-top:10px}
+  .badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;margin-right:6px}
+  .b-ok{background:#e1f5ee;color:var(--ok)}
+  .b-wait{background:#fbeaf0;color:#993556}
+  .b-inf{background:#eef0f5;color:#5f5e5a}
+  .interlink a{color:var(--brand);text-decoration:none}
+  .note{font-size:12px;color:var(--warn);background:#faf3e3;border:1px dashed #ef9f27;
+    border-radius:10px;padding:12px 14px;margin-top:16px}
+  footer{margin-top:28px;font-size:12px;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <span class="tag">ITU-T FG-TIDA · Theme #50</span>
+    <h1>Theme #50 贡献矩阵草案</h1>
+    <p>把"覆盖 + 证据 + 独立见证"的思路，落成可对焦 #50 六项任务的提交框架。本件为本地草案，未提交外网。</p>
+  </section>
+
+  <div class="grid">
+    <div class="card full">
+      <h2>一、Theme #50 是什么（已对照一手源核实 · 2026-10-30）</h2>
+      <p style="color:#374151;font-size:14px">Theme #50 = <b>Completeness and Coordination of FG-TIDA Pre-standardization Activities</b>，由 Rémy F.（IN Groupe）于 2026-10-22 提出，open 状态，10 条评论（截至 2026-10-29）。一手源：<a href="https://github.com/FG-TIDA/themes/issues/50">FG-TIDA/themes · Issue #50</a>。其目标是对预标准化活动做“完整性盘点 + 协调”，围绕 7 个标准需求主题（terminology / identity / authority / policy / runtime / evidence / governance）。原文列出 <b>7 项交付物</b>：</p>
+      <ol>
+        <li>Standardisation Needs Framework（标准需求框架，7 主题结构）</li>
+        <li>FG-TIDA Coverage and Maturity Map（覆盖与成熟度地图，含可选机读格式）</li>
+        <li>External Standards Landscape（外部标准全景，交叉核对缺口/重叠/术语漂移）</li>
+        <li>Overlap, Dependency and Coordination Matrix（重叠、依赖与协调矩阵）</li>
+        <li>Gap Analysis（缺口分析）</li>
+        <li>Recommendations（建议：贡献、联络优先级、排序）</li>
+        <li>External Completeness Narrative（对外完整性叙述，含边界与依赖）</li>
+      </ol>
+      <p class="legend"><span class="badge b-ok">已核实</span>以上 7 项为 Issue 原文 Objectives/Deliverables 逐条还原；另注：#50 的 Open Question 2 原文即提出“fully / partly / externally / not covered”四分结果并征求判定标准——这正是本矩阵的落点。此前版本写“6 项任务”“当前第一优先级”，均与原文不符，已修正。</p>
+    </div>
+
+    <div class="card full">
+      <h2>二、Xinghua Zhao（zhaoxinghua09-cell，独立专家）已提交、且获回应的贡献（可逐字定位）</h2>
+      <p class="legend">一手源：<a href="https://github.com/FG-TIDA/themes/issues/50">Issue #50 评论串</a>（10-27 一条、10-29 三条）；发起者 Remy 10-28 回应采纳其建议并更新议题标题与正文。<b>采纳范围注意</b>：Remy 已明确采纳的是 10-27 的机读索引建议（见其 10-28 回复）；10-29 的证据列 / M0–M4 阶梯 / 宇宙差三点，Hernán 已回应认可，<b>Remy 尚未回应</b>——对外提交时不得笼统写"已被采纳"。</p>
+      <ol>
+        <li><b>机读索引起步</b>（10-27）：从当前 GitHub 状态出一份 theme→work-item 索引作为早期基线；Remy 10-28 采纳（"A first index … could provide an early baseline"）。</li>
+        <li><b>保留四分结果不折叠</b>（10-29，回应 Open Question 2）：四分（完全/部分/外部/未覆盖）是 #50 原文提出的，贡献者的贡献是论证"externally covered 不得折入其他三类——本图存在的前提"。</li>
+        <li><b>正交证据列</b>（10-29）：四分只说覆盖在哪，需另加一列记录"什么支撑这个标签"（stated / specified / enforced / observed），否则"声明过的行"和"被观察过的行"读起来一样。</li>
+        <li><b>M0–M4 见证人成熟度阶梯</b>（10-29）：每一级由"作者之外的谁能确认"定义，按见证人排序、不按机制排序——机制（凭证/运行时证明）回答不同问题，不构成单一升序（Hernán 提出、Xinghua Zhao 10-29 16:01 明确同意）。</li>
+        <li><b>宇宙差记双向</b>（10-29）：图必须记录其取材宇宙，双向记差——"声明了但在宇宙外"与"在宇宙内但未声明"；"没找到缺口"和"没找缺口"在表里读起来一样。</li>
+        <li><b>负面对照案例</b>（10-29）：Hernán 的负面案例（schema 合法但未验证的声明）之镜像——"因有人贴了提案就标已覆盖"的行；两者都是自声明占住了本该检查的位置。</li>
+      </ol>
+    </div>
+
+    <div class="card full">
+      <h2>三、覆盖 × 证据 矩阵（提交核心件）</h2>
+      <div class="matrix">
+        <div class="cell head"></div>
+        <div class="cell head">完全覆盖</div>
+        <div class="cell head">部分覆盖</div>
+        <div class="cell head">外部覆盖</div>
+        <div class="cell head">未覆盖</div>
+
+        <div class="cell rowh">独立见证</div>
+        <div class="cell">可移交证据</div>
+        <div class="cell">需补见证</div>
+        <div class="cell">外部引用</div>
+        <div class="cell hot">最高价值缺口</div>
+
+        <div class="cell rowh">实际运行</div>
+        <div class="cell">已落地</div>
+        <div class="cell">落地不全</div>
+        <div class="cell">外部落地</div>
+        <div class="cell">落地空白</div>
+
+        <div class="cell rowh">规范定义</div>
+        <div class="cell">有据可查</div>
+        <div class="cell">定义不全</div>
+        <div class="cell">外部定义</div>
+        <div class="cell">无定义</div>
+
+        <div class="cell rowh">作者自述</div>
+        <div class="cell">自评</div>
+        <div class="cell">自评部分</div>
+        <div class="cell">外部自评</div>
+        <div class="cell">无声明</div>
+      </div>
+      <p class="legend"><b>热点格 = 独立见证 × 未覆盖</b>：这是 #50 真正该补的空白，也是 贡献者的证据方法论最能发力的地方。格式完整 ≠ 技术完整，落到这里就是"有文档但无独立运行见证"。注：行序按<b>见证人</b>排序（作者自述→规范定义→实际运行→独立见证），不按机制排序——凭证与运行时证明回答不同问题，互不替代（与 Hernán 10-29 修正、Xinghua Zhao 16:01 确认的共识一致）。</p>
+    </div>
+
+    <div class="card full">
+      <h2>四、矩阵如何对接 #50 七项交付物</h2>
+      <ul>
+        <li><b>交付物1 需求框架</b>：矩阵列即证据维度，可对齐 7 主题做逐主题展开。</li>
+        <li><b>交付物2 覆盖与成熟度地图</b>：直接由本矩阵承担（四分结果 + 见证人轴 + 热点格），机读格式可由同数据出 CSV/JSON。</li>
+        <li><b>交付物3 外部标准全景</b>：交给 crosswalk 横切预印本做标准→设计属性映射，不硬闯会员。</li>
+        <li><b>交付物4 重叠依赖矩阵</b>：由 LGD 生态互链登记，避免重复建设。</li>
+        <li><b>交付物5 缺口分析</b>：热点格（独立见证×未覆盖）即首选缺口输出，且"宇宙差双向记录"保证缺口是"没找到"而非"没找"。</li>
+        <li><b>交付物6 建议</b>：以"证据目录 + 独立见证人"作为后续 SDO 移交门槛，满足可追溯。</li>
+        <li><b>交付物7 完整性叙述</b>：引用本矩阵 + 负面对照案例，写"我们如何知道覆盖是真的"。</li>
+      </ul>
+    </div>
+
+    <div class="card full interlink">
+      <h2>五、一手源与关联（引用直达）</h2>
+      <p style="font-size:14px;color:#374151">
+        一手源：<a href="https://github.com/FG-TIDA/themes/issues/50">FG-TIDA/themes · Issue #50（原文+评论串）</a> ·
+        <a href="https://github.com/FG-TIDA/themes">themes 仓（README/候选主题）</a> ·
+        <a href="https://www.itu.int/en/ITU-T/focusgroups/tida/Pages/default.aspx">ITU FG-TIDA 官方页</a> ·
+        <a href="https://www.itu.int/en/ITU-T/focusgroups/tida/Pages/ToR.aspx">FG-TIDA ToR</a><br><br>
+        LGD 生态互链：第1篇（LGD生态枢纽） · 第2篇（ITU-FG-TIDA作战） · 第3篇（W3C-IETF参与） · 第4篇（横切预印本锻造） · 第5篇（标准外发闸门）<br>
+        <span class="legend">本草案为上述篇目的落地实例：把 Theme #50 的"完整性"要求，用 LGD 证据纪律（独立见证）翻译为标准可提交语言。</span>
+      </p>
+    </div>
+
+    <div class="note">
+      <b>诚实边界</b>：① 第一节 7 项交付物与第二节各点已对照 <a href="https://github.com/FG-TIDA/themes/issues/50">Issue #50 一手源</a>逐条核实（2026-10-30），<span class="badge b-ok">已核实</span>；② 覆盖四级系 #50 Open Question 2 原文所有，Xinghua Zhao 贡献为"保留四分+证据列+见证人阶梯"，归属已修正；③ 本件为草案，<b>未提交 GitHub/ITU</b>，提交前需 Xinghua Zhao 明确确认（外部动作）。
+    </div>
+  </div>
+
+  <footer>草案 v2 · 2026-10-30 对照一手源核实修订 · S3/S7 已过，S4–S6 见审查清单</footer>
+</div>
+</body>
+</html>
