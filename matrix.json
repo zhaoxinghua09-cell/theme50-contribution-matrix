@@ -1,17 +1,22 @@
 {
   "title": "Theme #50 Coverage x Evidence Matrix (proposal)",
   "source_issue": "https://github.com/FG-TIDA/themes/issues/50",
-  "version": "v2-2026-10-30",
-  "note": "Proposal tool, not consensus output. Rows are ordered by WITNESS (who other than the author can confirm), not by mechanism. Assurance basis and operational effect are claim-specific, potentially multi-valued dimensions (per 2026-10-29 discussion consensus).",
+  "version": "v3-2026-10-30",
+  "note": "Proposal tool, not consensus output. Rows are ordered by WITNESS (who other than the author can confirm), not by mechanism. Assurance basis and operational effect are claim-specific, potentially multi-valued dimensions (per 2026-10-29 discussion consensus). Hotspots revised per S6 external review (Muse, 2026-10-30): two hotspots instead of one.",
   "coverage_outcomes": ["fully covered", "partly covered", "externally covered", "not covered"],
   "witness_rows": [
-    {"row": "independent witness", "cells": {"fully covered": "transferable evidence", "partly covered": "witness needed", "externally covered": "external citation", "not covered": "highest-value gap"}},
+    {"row": "independent witness", "cells": {"fully covered": "transferable evidence", "partly covered": "witness needed", "externally covered": "transferable (external)", "not covered": "coverage gap"}},
     {"row": "actual operation", "cells": {"fully covered": "deployed", "partly covered": "partial deployment", "externally covered": "external deployment", "not covered": "deployment blank"}},
-    {"row": "specification", "cells": {"fully covered": "documented", "partly covered": "incomplete spec", "externally covered": "external spec", "not covered": "no definition"}},
-    {"row": "author self-statement", "cells": {"fully covered": "self-assessed", "partly covered": "self-assessed partial", "externally covered": "external self-assessment", "not covered": "no statement"}}
+    {"row": "specification", "cells": {"fully covered": "documented", "partly covered": "HOT evidence gap: incomplete spec", "externally covered": "external spec", "not covered": "no definition"}},
+    {"row": "author self-statement", "cells": {"fully covered": "HOT evidence gap: self-declared only", "partly covered": "self-assessed partial", "externally covered": "external self-assessment", "not covered": "DANGER: claimed-but-absent (false coverage)"}}
   ],
-  "hot_cell": {"row": "independent witness", "outcome": "not covered", "claim": "highest-value gap: documented but no independent operational witness (format completeness is not technical completeness)"},
+  "hotspots": [
+    {"type": "coverage gap", "where": "the entire not-covered column", "meaning": "no evidence of any kind exists; the topic itself is missing"},
+    {"type": "evidence gap", "where": "covered-but-unwitnessed diagonal (fully x self-declared, partly x specification)", "meaning": "format completeness is not technical completeness: looks complete, never run, never witnessed"}
+  ],
+  "danger_cell": {"row": "author self-statement", "outcome": "not covered", "claim": "claimed-but-absent: a coverage claim about an uncovered topic is false coverage - more dangerous than silence"},
   "additional_multivalued_dimensions": ["declared content and scope", "assurance basis (self-declared / independently verified / credential-backed / runtime-attested - not a rank)", "operational effect (describes / enforces / evaluates - not a rank)"],
   "contributor_disclosure": "Xinghua Zhao (independent expert), github.com/zhaoxinghua09-cell",
+  "external_review": "Muse S6 (2026-10-30): PASS-with-changes; three changes applied (two hotspots, two renamed cells, capability language in mapping)",
   "license": "CC-BY-4.0"
 }
