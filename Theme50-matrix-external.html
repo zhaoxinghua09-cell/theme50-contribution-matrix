@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ITU-T FG-TIDA · Theme #50 贡献矩阵（草案）</title>
+<title>ITU-T FG-TIDA · Theme #50 Contribution Matrix (draft)</title>
 <style>
   :root{
     --bg:#f6f8fb; --card:#ffffff; --ink:#1f2937; --muted:#6b7280;
@@ -11,7 +11,7 @@
     --shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     background:linear-gradient(180deg,#eef3fb 0%,#f6f8fb 220px);color:var(--ink);line-height:1.65}
   .wrap{max-width:980px;margin:0 auto;padding:40px 24px 64px}
   .hero{background:linear-gradient(135deg,#ffffff 0%,#eef4fd 100%);border:1px solid var(--line);
@@ -26,7 +26,7 @@
   .card.full{grid-column:1 / -1}
   ol,ul{margin-left:18px;font-size:14px;color:#374151}
   li{margin:6px 0}
-  .matrix{display:grid;grid-template-columns:120px repeat(4,1fr);gap:6px;margin-top:6px}
+  .matrix{display:grid;grid-template-columns:150px repeat(4,1fr);gap:6px;margin-top:6px}
   .cell{border:1px solid var(--line);border-radius:8px;padding:10px 8px;font-size:12px;text-align:center;background:#fafbfc}
   .cell.head{background:#eef4fd;font-weight:600;color:var(--brand)}
   .cell.rowh{background:#f1f5fb;font-weight:600;text-align:left;display:flex;align-items:center}
@@ -46,106 +46,106 @@
 <div class="wrap">
   <section class="hero">
     <span class="tag">ITU-T FG-TIDA · Theme #50</span>
-    <h1>Theme #50 贡献矩阵草案</h1>
-    <p>把"覆盖 + 证据 + 独立见证"的思路，落成可对焦 #50 六项任务的提交框架。本件为提案草稿，已于 2026-10-30 随整合提案公开于本仓，并提交至 Theme #50 议题串（comment 6518762419）。</p>
+    <h1>Theme #50 Contribution Matrix (draft)</h1>
+    <p>Turns the idea of "coverage + evidence + independent witness" into a submission framework that can be mapped onto the seven deliverables of Theme #50. This document is a proposal draft; it was published in this repository on 2026-10-30 together with the consolidated proposal, and posted to the Theme #50 issue thread (comment 6518762419).</p>
   </section>
 
   <div class="grid">
     <div class="card full">
-      <h2>一、Theme #50 是什么（已对照一手源核实 · 2026-10-30）</h2>
-      <p style="color:#374151;font-size:14px">Theme #50 = <b>Completeness and Coordination of FG-TIDA Pre-standardization Activities</b>，由 Rémy F.（IN Groupe）于 2026-10-22 提出，open 状态，10 条评论（截至 2026-10-29）。一手源：<a href="https://github.com/FG-TIDA/themes/issues/50">FG-TIDA/themes · Issue #50</a>。其目标是对预标准化活动做“完整性盘点 + 协调”，围绕 7 个标准需求主题（terminology / identity / authority / policy / runtime / evidence / governance）。原文列出 <b>7 项交付物</b>：</p>
+      <h2>1. What Theme #50 is (verified against primary sources · 2026-10-30)</h2>
+      <p style="color:#374151;font-size:14px">Theme #50 = <b>Completeness and Coordination of FG-TIDA Pre-standardization Activities</b>, raised by Rémy F. (IN Groupe) on 2026-10-22, currently open, 10 comments (as of 2026-10-29). Primary source: <a href="https://github.com/FG-TIDA/themes/issues/50">FG-TIDA/themes · Issue #50</a>. Its objective is to take stock of, and coordinate, pre-standardization activity, organised around seven standardisation-need themes (terminology / identity / authority / policy / runtime / evidence / governance). The issue lists <b>seven deliverables</b>:</p>
       <ol>
-        <li>Standardisation Needs Framework（标准需求框架，7 主题结构）</li>
-        <li>FG-TIDA Coverage and Maturity Map（覆盖与成熟度地图，含可选机读格式）</li>
-        <li>External Standards Landscape（外部标准全景，交叉核对缺口/重叠/术语漂移）</li>
-        <li>Overlap, Dependency and Coordination Matrix（重叠、依赖与协调矩阵）</li>
-        <li>Gap Analysis（缺口分析）</li>
-        <li>Recommendations（建议：贡献、联络优先级、排序）</li>
-        <li>External Completeness Narrative（对外完整性叙述，含边界与依赖）</li>
+        <li>Standardisation Needs Framework (seven-theme structure)</li>
+        <li>FG-TIDA Coverage and Maturity Map (with an optional machine-readable format)</li>
+        <li>External Standards Landscape (cross-checking gaps, overlaps and terminology drift)</li>
+        <li>Overlap, Dependency and Coordination Matrix</li>
+        <li>Gap Analysis</li>
+        <li>Recommendations (contributions, liaison priorities, sequencing)</li>
+        <li>External Completeness Narrative (including boundaries and dependencies)</li>
       </ol>
-      <p class="legend"><span class="badge b-ok">已核实</span>以上 7 项为 Issue 原文 Objectives/Deliverables 逐条还原；另注：#50 的 Open Question 2 原文即提出“fully / partly / externally / not covered”四分结果并征求判定标准——这正是本矩阵的落点。此前版本写“6 项任务”“当前第一优先级”，均与原文不符，已修正。</p>
+      <p class="legend"><span class="badge b-ok">Verified</span>The seven items above are reconstructed item by item from the Objectives/Deliverables section of the issue text. Note also that Open Question 2 of #50 itself proposes the four-way outcome "fully / partly / externally / not covered" and asks for the criteria by which it should be judged — which is precisely where this matrix lands. An earlier version said "six tasks" and "current first priority"; neither matched the source text and both have been corrected.</p>
     </div>
 
     <div class="card full">
-      <h2>二、Xinghua Zhao（zhaoxinghua09-cell，独立专家）已提交、且获回应的贡献（可逐字定位）</h2>
-      <p class="legend">一手源：<a href="https://github.com/FG-TIDA/themes/issues/50">Issue #50 评论串</a>（10-27 一条、10-29 三条）；发起者 Remy 10-28 回应采纳其建议并更新议题标题与正文。<b>采纳范围注意</b>：Remy 已明确采纳的是 10-27 的机读索引建议（见其 10-28 回复）；10-29 的证据列 / M0–M4 阶梯 / 宇宙差三点，Hernán 已回应认可，<b>Remy 尚未回应</b>——对外提交时不得笼统写"已被采纳"。</p>
+      <h2>2. Contributions already submitted by Xinghua Zhao (zhaoxinghua09-cell, independent expert) that received a response (locatable verbatim)</h2>
+      <p class="legend">Primary source: <a href="https://github.com/FG-TIDA/themes/issues/50">Issue #50 comment thread</a> (one comment on 10-27, three on 10-29); the originator Remy responded on 10-28, adopting the suggestion and updating both the issue title and body. <b>Scope of adoption, please note</b>: what Remy has explicitly adopted is the machine-readable index suggestion of 10-27 (see the 10-28 reply). On the three points raised on 10-29 — the evidence column, the M0–M4 ladder, and the universe-difference — Hernán has responded in acknowledgement, <b>but Remy has not yet responded</b>. An external submission must therefore not state in general terms that all of it "has been adopted".</p>
       <ol>
-        <li><b>机读索引起步</b>（10-27）：从当前 GitHub 状态出一份 theme→work-item 索引作为早期基线；Remy 10-28 采纳（"A first index … could provide an early baseline"）。</li>
-        <li><b>保留四分结果不折叠</b>（10-29，回应 Open Question 2）：四分（完全/部分/外部/未覆盖）是 #50 原文提出的，贡献者的贡献是论证"externally covered 不得折入其他三类——本图存在的前提"。</li>
-        <li><b>正交证据列</b>（10-29）：四分只说覆盖在哪，需另加一列记录"什么支撑这个标签"（stated / specified / enforced / observed），否则"声明过的行"和"被观察过的行"读起来一样。</li>
-        <li><b>M0–M4 见证人成熟度阶梯</b>（10-29）：每一级由"作者之外的谁能确认"定义，按见证人排序、不按机制排序——机制（凭证/运行时证明）回答不同问题，不构成单一升序（Hernán 提出、Xinghua Zhao 10-29 16:01 明确同意）。</li>
-        <li><b>宇宙差记双向</b>（10-29）：图必须记录其取材宇宙，双向记差——"声明了但在宇宙外"与"在宇宙内但未声明"；"没找到缺口"和"没找缺口"在表里读起来一样。</li>
-        <li><b>负面对照案例</b>（10-29）：Hernán 的负面案例（schema 合法但未验证的声明）之镜像——"因有人贴了提案就标已覆盖"的行；两者都是自声明占住了本该检查的位置。</li>
+        <li><b>Machine-readable index as a starting point</b> (10-27): produce a theme→work-item index from the current GitHub state as an early baseline; adopted by Remy on 10-28 ("A first index … could provide an early baseline").</li>
+        <li><b>Keep the four-way outcome un-collapsed</b> (10-29, in response to Open Question 2): the four categories (fully / partly / externally / not covered) are proposed in the #50 text itself; the contributor's contribution is the argument that "externally covered" must not be folded into the other three — that is the precondition for this matrix to exist at all.</li>
+        <li><b>An orthogonal evidence column</b> (10-29): the four-way outcome says only where coverage lies, so a further column is needed to record "what supports that label" (stated / specified / enforced / observed); otherwise a row that has merely been declared reads the same as a row that has actually been observed.</li>
+        <li><b>The M0–M4 witness-maturity ladder</b> (10-29): each level is defined by "who, other than the author, can confirm it", ordered by witness rather than by mechanism — mechanisms (credentials, runtime attestation) answer different questions and do not form a single ranking (raised by Hernán, explicitly agreed by Xinghua Zhao on 10-29 at 16:01).</li>
+        <li><b>Record the universe difference in both directions</b> (10-29): the map must record the universe it was drawn from and the difference in both directions — "declared but outside the universe" and "inside the universe but undeclared"; otherwise "no gap found" and "no gap looked for" read the same in the table.</li>
+        <li><b>Negative control case</b> (10-29): the mirror image of Hernán's negative case (a declaration that is schema-valid but unverified) is the row that is marked covered merely because someone posted a proposal; in both cases a self-declaration occupies a position that should have been examined.</li>
       </ol>
     </div>
 
     <div class="card full">
-      <h2>三、覆盖 × 证据 矩阵（提交核心件）</h2>
+      <h2>3. Coverage × evidence matrix (core submission item)</h2>
       <div class="matrix">
         <div class="cell head"></div>
-        <div class="cell head">完全覆盖</div>
-        <div class="cell head">部分覆盖</div>
-        <div class="cell head">外部覆盖</div>
-        <div class="cell head">未覆盖</div>
+        <div class="cell head">Fully covered</div>
+        <div class="cell head">Partly covered</div>
+        <div class="cell head">Externally covered</div>
+        <div class="cell head">Not covered</div>
 
-        <div class="cell rowh">独立见证</div>
-        <div class="cell">可移交证据</div>
-        <div class="cell">需补见证</div>
-        <div class="cell">可移交（外部）</div>
-        <div class="cell hot">覆盖缺口</div>
+        <div class="cell rowh">Independent witness</div>
+        <div class="cell">Transferable evidence</div>
+        <div class="cell">Witness needed</div>
+        <div class="cell">Transferable (external)</div>
+        <div class="cell hot">Coverage gap</div>
 
-        <div class="cell rowh">实际运行</div>
-        <div class="cell">已落地</div>
-        <div class="cell">落地不全</div>
-        <div class="cell">外部落地</div>
-        <div class="cell">落地空白</div>
+        <div class="cell rowh">Actual operation</div>
+        <div class="cell">Deployed</div>
+        <div class="cell">Partial deployment</div>
+        <div class="cell">External deployment</div>
+        <div class="cell">Deployment blank</div>
 
-        <div class="cell rowh">规范定义</div>
-        <div class="cell">有据可查</div>
-        <div class="cell hot">定义不全</div>
-        <div class="cell">外部定义</div>
-        <div class="cell">无定义</div>
+        <div class="cell rowh">Specification</div>
+        <div class="cell">Documented</div>
+        <div class="cell hot">Incomplete specification</div>
+        <div class="cell">External specification</div>
+        <div class="cell">No definition</div>
 
-        <div class="cell rowh">作者自述</div>
-        <div class="cell hot">仅自述·证据缺口</div>
-        <div class="cell">自评部分</div>
-        <div class="cell">外部自评</div>
-        <div class="cell hot">有声明而无覆盖（虚假覆盖）</div>
+        <div class="cell rowh">Author self-statement</div>
+        <div class="cell hot">Self-declared only · evidence gap</div>
+        <div class="cell">Self-assessed partial</div>
+        <div class="cell">External self-assessment</div>
+        <div class="cell hot">Claimed but absent (false coverage)</div>
       </div>
-      <p class="legend"><b>两个热点（依 Muse S6 评审修正）</b>：① <b>未覆盖列</b>=覆盖缺口（该主题无任何证据可言）；② <b>已覆盖但无见证的对角格</b>（完全×作者自述、部分×规范定义）=证据缺口——"格式完整 ≠ 技术完整"落在这里：看着齐全、却从未运行或从未被独立见证。最危险格 = 作者自述×未覆盖：<b>有声明而无覆盖</b>，虚假覆盖比沉默更危险。另：独立见证×外部覆盖 = 可移交（外部），与完全×独立见证同级的一等移交候选。行序按<b>见证人</b>排序，不按机制排序——凭证与运行时证明回答不同问题，互不替代（与 Hernán 10-29 修正、评论串 16:01 确认的共识一致）。</p>
+      <p class="legend"><b>Two hotspots (revised per Muse S6 review)</b>: (1) the <b>not-covered column</b> is the coverage gap — there is no evidence of any kind for that theme; (2) the <b>covered-but-unwitnessed diagonal cells</b> (fully × author self-statement, partly × specification) are evidence gaps — this is where "format completeness ≠ technical completeness" lands: it looks complete, yet was never run and never independently witnessed. The most dangerous cell is author self-statement × not covered: <b>claimed but absent</b> — false coverage is more dangerous than silence. Note also that independent witness × externally covered = transferable (external), a first-class transfer candidate of the same standing as fully × independent witness. Rows are ordered by <b>witness</b>, not by mechanism — a credential and a runtime attestation answer different questions and do not substitute for one another (consistent with Hernán's 10-29 correction and the agreement confirmed in the thread at 16:01).</p>
     </div>
 
     <div class="card full">
-      <h2>四、矩阵如何对接 #50 七项交付物</h2>
+      <h2>4. How the matrix maps onto the seven #50 deliverables</h2>
       <ul>
-        <li><b>交付物1 需求框架</b>：矩阵列即证据维度，可对齐 7 主题做逐主题展开。</li>
-        <li><b>交付物2 覆盖与成熟度地图</b>：直接由本矩阵承担（四分结果 + 见证人轴 + 双热点），机读格式可由同数据出 CSV/JSON。</li>
-        <li><b>交付物3 外部标准全景</b>：本矩阵<b>可为</b>该交付物提供输入，横切预印本（crosswalk）<b>可作</b>标准→设计属性映射的支撑工具——矩阵不能指派此任务，提交者只是提供能力。</li>
-        <li><b>交付物4 重叠依赖矩阵</b>：同理，LGD 生态互链登记<b>可作</b>避免重复建设的支撑，非由矩阵指派。</li>
-        <li><b>交付物5 缺口分析</b>：双热点即首选缺口输出，且"宇宙差双向记录"保证缺口是"没找到"而非"没找"。</li>
-        <li><b>交付物6 建议</b>：本提交<b>提议</b>以"证据目录 + 独立见证人"作为后续 SDO 移交门槛——此为提交者的提案，非矩阵的固有属性。</li>
-        <li><b>交付物7 完整性叙述</b>：可引用本矩阵 + 负面对照案例，写"我们如何知道覆盖是真的"。</li>
+        <li><b>Deliverable 1, needs framework</b>: the columns of the matrix are the evidence dimensions and can be expanded theme by theme across the seven themes.</li>
+        <li><b>Deliverable 2, coverage and maturity map</b>: carried directly by this matrix (four-way outcome + witness axis + two hotspots); the machine-readable format can be produced as CSV/JSON from the same data.</li>
+        <li><b>Deliverable 3, external standards landscape</b>: this matrix <b>can</b> supply input to that deliverable, and the crosswalk <b>can</b> serve as a supporting tool for mapping standard → design property. The matrix cannot assign that task; the submitter is only offering a capability.</li>
+        <li><b>Deliverable 4, overlap and dependency matrix</b>: likewise, the LGD ecosystem interlink register <b>can</b> support the avoidance of duplicated work; it is not assigned by this matrix.</li>
+        <li><b>Deliverable 5, gap analysis</b>: the two hotspots are the primary gap output, and the "universe difference recorded in both directions" guarantees that a gap is "not found" rather than "not looked for".</li>
+        <li><b>Deliverable 6, recommendations</b>: this submission <b>proposes</b> using "evidence catalogue + independent witness" as the threshold for subsequent hand-over to an SDO; this is the submitter's proposal, not an inherent property of the matrix.</li>
+        <li><b>Deliverable 7, completeness narrative</b>: can cite this matrix together with the negative control case to write "how we know the coverage is real".</li>
       </ul>
     </div>
 
     <div class="card full interlink">
-      <h2>五、一手源与关联（引用直达）</h2>
+      <h2>5. Primary sources and related links (directly reachable)</h2>
       <p style="font-size:14px;color:#374151">
-        一手源：<a href="https://github.com/FG-TIDA/themes/issues/50">FG-TIDA/themes · Issue #50（原文+评论串）</a> ·
-        <a href="https://github.com/FG-TIDA/themes">themes 仓（README/候选主题）</a> ·
-        <a href="https://www.itu.int/en/ITU-T/focusgroups/tida/Pages/default.aspx">ITU FG-TIDA 官方页</a> ·
-        <a href="https://www.itu.int/en/ITU-T/focusgroups/tida/Pages/ToR.aspx">FG-TIDA ToR</a><br><br>
-        LGD 生态互链：第1篇（LGD生态枢纽） · 第2篇（ITU-FG-TIDA作战） · 第3篇（W3C-IETF参与） · 第4篇（横切预印本锻造） · 第5篇（标准外发闸门）<br>
-        <span class="legend">本草案为上述篇目的落地实例：把 Theme #50 的"完整性"要求，用 LGD 证据纪律（独立见证）翻译为标准可提交语言。</span>
+        Primary sources: <a href="https://github.com/FG-TIDA/themes/issues/50">FG-TIDA/themes · Issue #50 (text + comment thread)</a> ·
+        <a href="https://github.com/FG-TIDA/themes">themes repository (README / candidate themes)</a> ·
+        <a href="https://www.itu.int/en/ITU-T/focusgroups/tida/Pages/default.aspx">ITU FG-TIDA official page</a> ·
+        <a href="https://www.itu.int/en/ITU-T/focusgroups/tida/Pages/ToR.aspx">FG-TIDA Terms of Reference</a><br><br>
+        LGD ecosystem interlinks: Part 1 (LGD ecosystem hub) · Part 2 (ITU-FG-TIDA operations) · Part 3 (W3C-IETF participation) · Part 4 (crosswalk preprint forging) · Part 5 (standard outbound gate)<br>
+        <span class="legend">This draft is the worked example of those parts: it translates the "completeness" requirement of Theme #50 into the submittable language of standards, using the LGD evidence discipline (independent witness).</span>
       </p>
     </div>
 
     <div class="note">
-      <b>诚实边界</b>：① 第一节 7 项交付物与第二节各点已对照 <a href="https://github.com/FG-TIDA/themes/issues/50">Issue #50 一手源</a>逐条核实（2026-10-30），<span class="badge b-ok">已核实</span>；② 覆盖四级系 #50 Open Question 2 原文所有，Xinghua Zhao 贡献为"保留四分+证据列+见证人阶梯"，归属已修正；③ 本件为草案 v3，已吸收 Muse S6 评审（PASS-with-changes）三条修正：双热点、两弱格改名、§四改能力语言；④ 本件为草案，<b>未提交 GitHub/ITU</b>，提交前需 Xinghua Zhao 明确确认（外部动作）。
+      <b>Honest boundaries</b>: (1) The seven deliverables in section 1 and each point in section 2 have been checked item by item against <a href="https://github.com/FG-TIDA/themes/issues/50">Issue #50, the primary source</a> (2026-10-30) <span class="badge b-ok">verified</span>. (2) The four coverage levels are those of Open Question 2 in the #50 text; Xinghua Zhao's contribution is "keep the four-way split + add the evidence column + add the witness ladder", and attribution has been corrected. (3) This document is draft v3 and incorporates three corrections from the Muse S6 review (PASS-with-changes): the two hotspots, the renaming of two weak cells, and capability language in section 4. (4) This document is a draft; it has <b>not been submitted to GitHub or ITU</b>, and submission requires explicit confirmation from Xinghua Zhao (an external action).
     </div>
   </div>
 
-  <footer>草案 v3 · 2026-10-30 一手源核实 + Muse S6 评审修正 · S3/S4/S5/S5.1/S6/S7/S8 全部实跑</footer>
+  <footer>Draft v3 · 2026-10-30 primary-source verification + Muse S6 review corrections · S3/S4/S5/S5.1/S6/S7/S8 all executed</footer>
 </div>
 </body>
 </html>
