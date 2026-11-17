@@ -1,0 +1,56 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "orcid": {
+      "@id": "https://schema.org/identifier",
+      "@type": "@id"
+    }
+  },
+  "@type": "CreativeWork",
+  "@id": "https://github.com/zhaoxinghua09-cell/theme50-contribution-matrix#metadata",
+  "name": "Theme 50 contribution matrix (working draft)",
+  "description": "Working draft of a contribution matrix mapped to FG-TIDA Theme 50. Not adopted by any standards body. Not submitted. Cite a specific file at a specific commit, and state that it is a draft.",
+  "version": "draft",
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-17",
+  "creativeWorkStatus": "Draft",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "author": {
+    "@type": "Person",
+    "name": "Xinghua Zhao",
+    "identifier": "https://orcid.org/0009-0001-0512-1237",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Independent researcher"
+    }
+  },
+  "isBasedOn": {
+    "@id": "https://doi.org/10.5281/zenodo.22456647"
+  },
+  "keywords": [
+    "ITU-T FG-TIDA",
+    "Theme 50",
+    "working draft",
+    "contribution matrix"
+  ],
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "README.md",
+      "description": "What the matrix is and how to read it",
+      "encodingFormat": "text/markdown"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Theme50-matrix-external.html",
+      "description": "The matrix as a self-contained, offline-viewable HTML page",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "matrix.json",
+      "description": "The matrix as machine-readable data",
+      "encodingFormat": "application/json"
+    }
+  ]
+}
